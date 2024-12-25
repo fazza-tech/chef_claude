@@ -4,9 +4,12 @@ export default function MainS(){
     const ingredientsListItems = ingredients.map(ingredient => {
         return <li key={ingredient}>{ingredient}</li>
     })
+    function handleSubmit(){
+        console.log("submitted")
+    }
     return(
         <main>
-            <form className="add-ingredient-form">
+            <form onSubmit={handleSubmit} className="add-ingredient-form">
                 <input type="text"
                         placeholder="e.g. oregano"
                         aria-label="Add-Ingredient"        
